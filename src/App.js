@@ -13,6 +13,7 @@ export class App extends Component {
                 <h4 className="display-4">Welcome to the Airline!</h4>
             </div>
 
+            // First row
             <div className="row">
                 <div className="col-sm">
                     <Panel title="Balance">
@@ -25,6 +26,8 @@ export class App extends Component {
                     </Panel>
                 </div>
             </div>
+
+            // Second row
             <div className="row">
                 <div className="col-sm">
                     <Panel title="Available flights">
