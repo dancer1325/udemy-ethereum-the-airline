@@ -2,7 +2,8 @@ const webpack = require('webpack');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  devtool: 'sourcemap',
+  // devtool: 'sourcemap',           // Deprecated in the migration from webpack 4 --> 5
+  devtool: 'source-map',
   entry: ['babel-polyfill', './src/index.js'],
   module: {
     rules: [
