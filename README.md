@@ -71,4 +71,5 @@
     * Problems:
       * Problem1: It doesn't support react, react-dom > 15
         * Solution: Use react versions 15.
+        * Note: https://github.com/tomchentw/react-toastr/issues/124
 
