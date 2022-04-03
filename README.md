@@ -20,5 +20,22 @@
     * start. Script created to run the server
     * Open the browser in 'localhost:8080'
 
-
+# Ways of doing integration tests?
+* Mocha + web3
+* truffle
+  * The way to proceed here
+  * `contract(...)..`
+    * Replace `describe(..)`  in mocha
+  * `truffle test`
+    * Run all tests
+    * `-g "NameOfTheIt"` 
+      * Allows running a specific it
+    * Problems: 
+      * Problem1: "Error: sender doesn't have enough funds to send tx. ..."
+        * Solution: Restart Ganache, because we are reusing the same session of Ganache and consuming gas
+  * How to debug?
+    * Don't do anything marking the line as break point
+    * `... debug(SomeContractOperation)`
+      * Just possible to debug contract's operations
+    * `truffle test --debug`
 
