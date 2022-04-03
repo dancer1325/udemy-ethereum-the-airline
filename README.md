@@ -68,3 +68,7 @@
   * 'react-toastr'
     * Characteristics
       * Display a list of toast messages
+    * Problems:
+      * Problem1: It doesn't support react, react-dom > 15
+        * Solution: Use react versions 15.
+
