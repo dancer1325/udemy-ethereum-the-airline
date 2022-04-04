@@ -1,5 +1,6 @@
 import AirlineContract from "../build/contracts/Airline.json";
-import contract from "truffle-contract";
+import contract from "@truffle/contract";
+// import contract from "truffle-contract";
 
 export default async(provider) => {
     const airline = contract(AirlineContract);
