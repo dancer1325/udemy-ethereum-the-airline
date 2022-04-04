@@ -72,4 +72,20 @@
       * Problem1: It doesn't support react, react-dom > 15
         * Solution: Use react versions 15.
         * Note: https://github.com/tomchentw/react-toastr/issues/124
+  * 'truffle-contract'
+    * Characteristics
+      * Ethereum contract abstraction for
+        * Node
+        * Browser
+    * Problems:
+      * Problem1: `Critical dependency: the request of a dependency is an expression` for scrypt.js 
+        * Note: https://github.com/trufflesuite/truffle/issues/3009
+        * Solution: TODO: How to fix it? 
+  * '@truffle/contract'
+    * Replacement of 'truffle-contract'
+    * Problems:
+      * Problem1: `Critical dependency: require function is used in a way in which dependencies cannot be statically extracted` for ethers.min.js 
+        * Note: Nothing relevant found. Similar to https://github.com/ethers-io/ethers.js/issues/2045
+        * Solution: TODO: How to fix it?
+
 
