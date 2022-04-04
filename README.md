@@ -19,6 +19,8 @@
 * `npm run start` / `npm start`
     * start. Script created to run the server
     * Open the browser in 'localhost:8080'
+    * Problems:
+      * Problem1: Errors indicated with truffle-contract dependency. Indicated [here](https://github.com/dancer1325/udemy-ethereum-the-airline/blob/master/README.md)
 
 # Ways of doing integration tests?
 * Mocha + web3
