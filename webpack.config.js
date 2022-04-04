@@ -9,8 +9,8 @@ module.exports = {
       http: false,
       https: false,
       os: false,
-      url: false,                    // Fix problems which can't resolve url
-      path: false
+      url: false                    // Fix problems which can't resolve url
+      // path: false
     },
   },
   node: {
