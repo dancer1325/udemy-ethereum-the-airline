@@ -38,19 +38,20 @@ export class App extends Component {
 
         var account = (await this.web3.eth.getAccounts())[0];
 
-        let flightPurchased = this.airline.FlightPurchased();
-        flightPurchased.watch(function (err, result) {
+        let flightPurchased = this.airline.FlightPurchased();                           // Store the invokation of the event emitted
+        flightPurchased.watch(function (err, result) {                                  // Suscribe to the event
 
             const { customer, price, flight } = result.args;
 
             if (customer === this.state.account) {
                 console.log(`You purchased a flight to ${flight} with a cost of ${price}`);
             } else {
-                this.container.success(`Last customer purchased a flight to ${flight}
+                // .success(MessageToDisplay, TitleOfTheToast)         Show a green container
+                this.container.success(`Last customer purchased a flight to ${flight}           
                 with a cost of ${price}`, 'Flight information');
             }
 
-        }.bind(this));
+        }.bind(this));                      // Some external libraries in JS pass its own scope  --> Required to bind to the "this" React component
 
         // Register / Suscribe on different events
         this.web3.currentProvider.publicConfigStore.on('update', async function (event) {
@@ -163,8 +164,10 @@ export class App extends Component {
                     </Panel>
                 </div>
             </div>
-            <ToastContainer ref={(input) => this.container = input}
-                className="toast-top-right" />
+
+            {/* Display pop up's */}
+            <ToastContainer ref={(input) => this.container = input}         {/* Store a reference of the toast */}
+                className="toast-top-right" />                              {/* Show in the top right corner */}
         </React.Fragment>
     }
 }
