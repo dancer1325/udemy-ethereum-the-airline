@@ -19,10 +19,10 @@ export class App extends Component {
         super(props);                       // React component's constructor
         this.state = {                      // React component's state
             balance: 0,                     // Indicate an initial value, to avoid problems mapping to the state afterwards
-            refundableEther: 0,
+            refundableEther: 0,             // Indicate an initial value, to avoid problems mapping to the state afterwards
             account: undefined,
             flights: [],                    // Indicate an initial value, to avoid problems mapping to the state afterwards
-            customerFlights: []
+            customerFlights: []             // Indicate an initial value, to avoid problems mapping to the state afterwards
         };
     }
 
@@ -52,14 +52,14 @@ export class App extends Component {
 
         }.bind(this));
 
-
+        // Register / Suscribe on different events
         this.web3.currentProvider.publicConfigStore.on('update', async function (event) {
             this.setState({
-                account: event.selectedAddress.toLowerCase()
+                account: event.selectedAddress.toLowerCase()                // Set the account to the one got from the event
             }, () => {
                 this.load();
             });
-        }.bind(this));
+        }.bind(this));                      // Some external libraries in JS pass its own scope  --> Required to bind to the "this" React component
 
         // Update React component's state
         this.setState({
@@ -84,6 +84,7 @@ export class App extends Component {
     }
 
     async getRefundableEther() {
+        // toEther  Convert function to convert to Ether
         let refundableEther = this.toEther((await this.airlineService.getRefundableEther(this.state.account)));
         this.setState({
             refundableEther
@@ -127,7 +128,7 @@ export class App extends Component {
             <div className="row">
                 <div className="col-sm">
                     <Panel title="Balance">
-                        <p><strong>{this.state.account}</strong></p>        {/* Inerpolation to get the value*/}
+                        <p><strong>{this.state.account}</strong></p>        {/* Interpolation to get the value*/}
                         <span><strong>Balance</strong>: {this.state.balance}</span>
                     </Panel>
                 </div>
@@ -135,7 +136,7 @@ export class App extends Component {
                     <Panel title="Loyalty points - refundable ether">
                         <span>{this.state.refundableEther} eth</span>
                         <button className="btn btn-sm bg-success text-white"
-                            onClick={this.refundLoyaltyPoints.bind(this)}>Refund</button>
+                            onClick={this.refundLoyaltyPoints.bind(this)}>Refund</button> {/* .bind(this)  Required to bind to the React's component scope*/}
                     </Panel>
                 </div>
             </div>
@@ -146,6 +147,7 @@ export class App extends Component {
                             return <div key={i}>                                {/* key  Unique to realize about the changes of each div */}
                                 <span>{flight.name} - cost: {this.toEther(flight.price)}</span>
                                 <button className="btn btn-sm btn-success text-white" onClick={() => this.buyFlight(i, flight)}>Purchase</button>
+                                {/* Bootstrap classes  btn-sm  small button,  btn-success button in green  */}
                             </div>
                         })}
 

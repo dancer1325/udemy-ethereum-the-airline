@@ -1,10 +1,13 @@
-
+// Class to connect with the contract
 export class AirlineService {
     constructor(contract) {                 // contract represents the truffle contract's instance
         this.contract = contract;
     }
 
+    // from    Account from which executes the transaction
+    // value   Amount of currency to send in the transaction
     async buyFlight(flightIndex, from, value) {
+        // {from, value}    Similar way to pass as it was used in the Airline.test
         return this.contract.buyFlight(flightIndex, { from, value });
     }
 
@@ -37,10 +40,12 @@ export class AirlineService {
     }
 
     getRefundableEther(from) {
+        // {from}    Pass the sender of the transaction
         return this.contract.getRefundableEther({ from });
     }
 
     redeemLoyaltyPoints(from) {
+        // {from}    Pass the sender of the transaction
         return this.contract.redeemLoyaltyPoints({ from });
     }
 
