@@ -1,6 +1,6 @@
 
 export class AirlineService {
-    constructor(contract) {
+    constructor(contract) {                 // contract represents the truffle contract's instance
         this.contract = contract;
     }
 
@@ -33,6 +33,7 @@ export class AirlineService {
 
     async getTotalFlights() {
         return (await this.contract.totalFlights()).toNumber();
+        // return parseFloat(await this.contract.totalFlights());           // Try in case previous doesn't work
     }
 
     getRefundableEther(from) {
@@ -43,6 +44,7 @@ export class AirlineService {
         return this.contract.redeemLoyaltyPoints({ from });
     }
 
+    // Map to return an object with name and price
     mapFlights(flights) {
         return flights.map(flight => {
             return {
