@@ -87,5 +87,8 @@
       * Problem1: `Critical dependency: require function is used in a way in which dependencies cannot be statically extracted` for ethers.min.js 
         * Note: Nothing relevant found. Similar to https://github.com/ethers-io/ethers.js/issues/2045
         * Solution: TODO: How to fix it?
+  * '@truffle/hdwallet-provider'
+    * Provider to use Mnemonic words to connect to other networks 
+
 
 
