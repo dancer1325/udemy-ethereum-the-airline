@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="2b7e3ad2-3af0-4292-90bb-e7f254f229e4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/truffle-config.js" beforeDir="false" afterPath="$PROJECT_DIR$/truffle-config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,8 @@
       <workItem from="1648819187942" duration="11538000" />
       <workItem from="1648975155495" duration="19442000" />
       <workItem from="1649052870843" duration="7408000" />
-      <workItem from="1649139048886" duration="13865000" />
+      <workItem from="1649139048886" duration="14744000" />
+      <workItem from="1649224975253" duration="3052000" />
     </task>
     <servers />
   </component>

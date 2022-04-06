@@ -13,6 +13,10 @@
 # How to compile?
 * `truffle compile`
 
+# How to deploy?
+* `truffle deploy` / `truffle deploy --network NameOfTheNetWorkDefinedInTheTruffleConfig`
+  * Also compiles the contracts
+
 # How to run?
 * `npm install` / `npm install --force`
     * Install all the dependencies
